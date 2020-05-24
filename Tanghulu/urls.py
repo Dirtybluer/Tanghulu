@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
+import activities.views as act_views
+import users.views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('comment/', include('comment.urls')),
+    path('post_activity', act_views.post_activity),
+    path('post_user_info', user_views.post_user_info),
 ]
