@@ -41,7 +41,7 @@ class User(models.Model):
         ('UN', 'Unknown')
     ]
 
-    stu_id = models.BigIntegerField(primary_key=True)
+    stu_id = models.AutoField(primary_key=True)
     user_name = models.TextField(max_length=15)
     password = models.TextField(max_length=50)  # to-do: store passwords properly
     gender = models.CharField(

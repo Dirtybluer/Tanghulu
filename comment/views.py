@@ -81,7 +81,7 @@ def like(request):
     comment = Comment.objects.filter(id=comment_id).get()
     comment.like_num = comment.like_num + 1
     comment.save()
-    user = User.objects.filter(id=user_id).get()
+    user = User.objects.filter(stu_id=user_id).get()
     comment_like = Comment_like.objects.create(user=user, comment=comment)
     comment_like.save()
     return HttpResponse(comment_like)
@@ -94,7 +94,7 @@ def reply_like(request):
     comment_reply = Comment_reply.objects.filter(id=reply_id).get()
     comment_reply.like_num = comment_reply.like_num + 1
     comment_reply.save()
-    user = User.objects.filter(id=user_id).get()
+    user = User.objects.filter(stu_id=user_id).get()
     comment_reply_like = Comment_reply_like.objects.create(user=user, comment=comment_reply)
     comment_reply_like.save()
     return HttpResponse(comment_reply_like)

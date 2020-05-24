@@ -1,13 +1,14 @@
 from django.db import models
+from users.models import User
 
 
 # Create your models here.
-class User(models.Model):
-    id = models.AutoField(primary_key=True)
-    user_name = models.CharField(max_length=15, default='someone')
-
-    class Meta:
-        db_table = 'user'
+# class User(models.Model):
+#     id = models.AutoField(primary_key=True)
+#     user_name = models.CharField(max_length=15, default='someone')
+#
+#     class Meta:
+#         db_table = 'user'
 
 
 class Comment(models.Model):
