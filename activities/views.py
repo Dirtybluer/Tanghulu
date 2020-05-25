@@ -8,7 +8,7 @@ from datetime import datetime
 def post_activity(request):
     Activity(
         name=request.POST.get('name'),
-        catgory=request.POST.get('category'),
+        category=request.POST.get('category'),
         address=request.POST.get('address'),
         male_wanted=request.POST.get('male_wanted'),
         female_wanted=request.POST.get('female_wanted'),
