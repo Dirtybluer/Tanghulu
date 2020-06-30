@@ -24,4 +24,5 @@ urlpatterns = [
     path('comment/', include('comment.urls')),
     path('post_activity', act_views.post_activity),
     path('post_user_info', user_views.post_user_info),
+    path('get_activity_list', act_views.get_activity_list)
 ]
